@@ -63,7 +63,7 @@ header {
 
 header h1 {
     user-select: none;
-    max-width: 7ch;
+    max-width: 8ch;
     word-wrap: break-word;
     margin-left: 2em;
 
