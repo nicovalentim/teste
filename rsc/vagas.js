@@ -60,14 +60,13 @@ const textoHTML = `
     </a>
 </section>`;
 
-document.getElementById("vaga").innerHTML += textoHTML;
+// função para importar as vagas na página
+do {
+    document.getElementById("vaga").innerHTML += textoHTML;
+    contadorVaga++
+} while (contadorVaga >= arraysJSON.length)
 
-console.log(document.getElementById("vaga"));
-
-// função de parar de importar caso não haja mais vagas
-//  if (contadorVaga >= arraysJSON.length) {
-//    console.log("Não há mais vagas para carregar")
-//}
+    document.getElementById("vaga").innerHTML += "Não há mais vagas para carregar";
 
 // debug das linhas acima
 // console.log(arraysJSON[contadorVaga].nome); // pegar a descrição da primeira vaga na lista
