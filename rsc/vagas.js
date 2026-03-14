@@ -32,6 +32,11 @@ do {
             tempoDeTrabalho = "Não foi cadastrado o período dessa vaga."
         }
 
+    let descNaPagina = arraysJSON[contadorVaga].descricao.length
+    if (descNaPagina > 200) {
+        descNaPagina = descNaPagina.substring(0,200) + "(...)";
+    }
+
     // traduzir esses dados pra html
     const textoHTML = `
     <hr />
@@ -52,7 +57,7 @@ do {
         Empresa: ${arraysJSON[contadorVaga].empresa}<br />
         Local: ${arraysJSON[contadorVaga].local}<br />
         Salário: R$ ${arraysJSON[contadorVaga].salario}<br /><br />
-        ${arraysJSON[contadorVaga].descricao}
+        ${descNaPagina}
     </section>
 
     <section class="botadoCandidatar">
