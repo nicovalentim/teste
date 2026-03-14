@@ -29,7 +29,7 @@
     }
 
 /* seção de vagas */
-.vaga {
+#vaga {
     align-items: center;
     column-gap: 2em;
     display: grid;
@@ -39,7 +39,7 @@
     margin-top: 1em;
 }
 
-.vaga hr {
+#vaga hr {
     grid-column-start: 1;
     grid-column-end: -1; /* -1 para usar todas as colunas */
     width: 100%;
