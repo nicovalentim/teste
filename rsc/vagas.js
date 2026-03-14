@@ -33,8 +33,8 @@ do {
         }
 
     let descNaPagina = arraysJSON[contadorVaga].descricao
-    if (descNaPagina > 200) {
-        descNaPagina = descNaPagina.substring(0,200) + "(...)";
+    if (descNaPagina.length > 500) {
+        descNaPagina = descNaPagina.substring(0,500) + "(...)";
     }
 
     // traduzir esses dados pra html
@@ -67,7 +67,6 @@ do {
     </section>`;
 
     // função para importar as vagas na página
-    do {
         document.getElementById("vaga").innerHTML += textoHTML;
         contadorVaga += 1
-    } while (arraysJSON.length >= contadorVaga)
+} while (arraysJSON.length > contadorVaga)
