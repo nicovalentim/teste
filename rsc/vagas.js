@@ -67,6 +67,7 @@ do {
     </section>`;
 
     // função para importar as vagas na página
+    do {
         document.getElementById("vaga").innerHTML += textoHTML;
         contadorVaga += 1
     } while (arraysJSON.length >= contadorVaga)
