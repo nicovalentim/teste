@@ -1,6 +1,6 @@
 // função de ler o json
 async function carregarJSON() {
-    const fetchJSON = await fetch("./vagas.json");
+    const fetchJSON = await fetch("rsc/vagas.json");
     const objJSON = await fetchJSON.json(); // json pra objeto no javascript
     return objJSON.vagas; // objeto para arrays
 }
