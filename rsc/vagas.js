@@ -32,7 +32,7 @@ do {
             tempoDeTrabalho = "Não foi cadastrado o período dessa vaga."
         }
 
-    let descNaPagina = arraysJSON[contadorVaga]
+    let descNaPagina = arraysJSON[contadorVaga].descricao
     if (descNaPagina > 200) {
         descNaPagina = descNaPagina.substring(0,200) + "(...)";
     }
