@@ -6,10 +6,11 @@ async function carregarJSON() {
 }
 
 const arraysJSON = await carregarJSON(); // guardar as arrays em uma variável
-const vaga = arraysJSON[contadorVaga];
 
 // contador de vagas
 let contadorVaga = 0
+
+const vaga = arraysJSON[contadorVaga];
 
 // converte número para valor em texto
 const tiposPresenca = [
