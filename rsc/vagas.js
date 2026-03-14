@@ -32,7 +32,7 @@ do {
             tempoDeTrabalho = "Não foi cadastrado o período dessa vaga."
         }
 
-    let descNaPagina = arraysJSON[contadorVaga].descricao.length
+    let descNaPagina = arraysJSON[contadorVaga]
     if (descNaPagina > 200) {
         descNaPagina = descNaPagina.substring(0,200) + "(...)";
     }
@@ -70,7 +70,3 @@ do {
         document.getElementById("vaga").innerHTML += textoHTML;
         contadorVaga += 1
     } while (arraysJSON.length >= contadorVaga)
-
-// debug das linhas acima
-// console.log(arraysJSON[2].nome); // pegar a descrição da primeira vaga na lista
-// console.log(arraysJSON.length); // ver quantas vagas estão cadastradas
