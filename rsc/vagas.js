@@ -64,9 +64,7 @@ const textoHTML = `
 do {
     document.getElementById("vaga").innerHTML += textoHTML;
     contadorVaga++
-} while (contadorVaga >= arraysJSON.length)
-
-    document.getElementById("vaga").innerHTML += "Não há mais vagas para carregar";
+} while (arraysJSON.length >= contadorVaga)
 
 // debug das linhas acima
 // console.log(arraysJSON[contadorVaga].nome); // pegar a descrição da primeira vaga na lista
