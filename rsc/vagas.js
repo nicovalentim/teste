@@ -6,6 +6,7 @@ async function carregarJSON() {
 }
 
 const arraysJSON = await carregarJSON(); // guardar as arrays em uma variável
+const vaga = arraysJSON[contadorVaga];
 
 // contador de vagas
 let contadorVaga = 0
@@ -23,10 +24,10 @@ const tiposTempo = [
 ];
 
 while (arraysJSON.length > contadorVaga) {
-    let presenca = tiposPresenca[arraysJSON[contadorVaga].presenca] ?? "Tipo de presença não registrado.";
-    let tempoDeTrabalho = tiposTempo[arraysJSON[contadorVaga].tempo] ?? "Período não cadastrado.";
+    let presenca = tiposPresenca[vaga.presenca] ?? "Tipo de presença não registrado.";
+    let tempoDeTrabalho = tiposTempo[vaga.tempo] ?? "Período não cadastrado.";
 
-    let descNaPagina = arraysJSON[contadorVaga].descricao
+    let descNaPagina = vaga.descricao
     if (descNaPagina.length > 500) {
         descNaPagina = descNaPagina.substring(0,500) + "(...)";
     }
@@ -36,7 +37,7 @@ while (arraysJSON.length > contadorVaga) {
     <hr />
 
     <section class="tituloVaga">
-        <h1>${arraysJSON[contadorVaga].nome}</h1>
+        <h1>${vaga.nome}</h1>
         <button class="filtro">
         <img src="icon/mapa.png" />
         ${presenca}
@@ -48,9 +49,9 @@ while (arraysJSON.length > contadorVaga) {
     </section>
 
     <section class="textoVaga">
-        Empresa: ${arraysJSON[contadorVaga].empresa}<br />
-        Local: ${arraysJSON[contadorVaga].local}<br />
-        Salário: R$ ${arraysJSON[contadorVaga].salario}<br /><br />
+        Empresa: ${vaga.empresa}<br />
+        Local: ${vaga.local}<br />
+        Salário: R$ ${vaga.salario}<br /><br />
         ${descNaPagina}
     </section>
 
