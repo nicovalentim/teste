@@ -29,8 +29,8 @@ while (arraysJSON.length > contadorVaga) {
     let tempoDeTrabalho = tiposTempo[vaga.tempo] ?? "Período não cadastrado.";
 
     let descNaPagina = vaga.descricao
-    if (descNaPagina.length > 250) {
-        descNaPagina = descNaPagina.substring(0,250) + "(...)";
+    if (descNaPagina.length > 300) {
+        descNaPagina = descNaPagina.substring(0,300) + "(...)";
     }
 
     // traduzir esses dados pra html
