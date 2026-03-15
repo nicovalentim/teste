@@ -1,4 +1,8 @@
 /* filtro de vagas */
+button {
+    display: inline;
+}
+
 .filtro {
     display: flex;
     justify-self: end;
@@ -23,18 +27,11 @@
     margin: 5px;
     }
 
-.fundo ul {
-    display: flex;
-}
-
 .selecionado {
     color: rgba(var(--branco),1);
     background-color: rgba(var(--realce), 1);
     }
 
-li {
-    display: inline-block;
-}
 
 /* seção de vagas */
 #vaga {
